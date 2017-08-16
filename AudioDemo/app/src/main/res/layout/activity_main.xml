@@ -22,4 +22,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="播放" />
+
+    <Button
+        android:id="@+id/save_audio_file"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="保存文件" />
+
+    <Button
+        android:id="@+id/read_audio_file"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="读取文件" />
 </LinearLayout>

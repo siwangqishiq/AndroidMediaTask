@@ -1,4 +1,4 @@
-package com.xinlan.audiodemo;
+package com.xinlan.audiodemo.audio;
 
 import android.os.Environment;
 
@@ -22,6 +22,27 @@ public class AudioFileUtil {
         fpath.mkdirs();//创建文件夹
         try {
             audioFile = new File(fpath ,filename + ".pcm");
+            audioFile.deleteOnExit();
+            audioFile.createNewFile();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return audioFile;
+    }
+
+    /**
+     * 用于保存的wave文件
+     * @param filename
+     * @return
+     */
+    public static File getAudioWaveFile(final String filename) {
+        File audioFile = null;
+        File fpath = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + "/data/record/");
+        if(!fpath.exists()){
+            fpath.mkdirs();//创建文件夹
+        }
+        try {
+            audioFile = new File(fpath ,filename + ".wav");
             audioFile.deleteOnExit();
             audioFile.createNewFile();
         } catch (IOException e) {

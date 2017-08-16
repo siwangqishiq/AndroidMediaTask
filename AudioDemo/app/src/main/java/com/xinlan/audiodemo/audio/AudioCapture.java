@@ -1,4 +1,4 @@
-package com.xinlan.audiodemo;
+package com.xinlan.audiodemo.audio;
 
 import android.media.AudioFormat;
 import android.media.AudioRecord;
@@ -12,10 +12,10 @@ import android.util.Log;
 
 public class AudioCapture {
     private static final String TAG = "AudioCapture";
-    private static final int DEFAULT_SOURCE = MediaRecorder.AudioSource.MIC;//数据源为麦克风
-    private static final int DEFAULT_SAMPLE_RATE = 44100;//采样率
-    private static final int DEFAULT_CHANNEL_CONFIG = AudioFormat.CHANNEL_IN_STEREO;//双通道
-    private static final int DEFAULT_AUDIO_FORMAT = AudioFormat.ENCODING_PCM_16BIT;//16位
+    public static final int DEFAULT_SOURCE = MediaRecorder.AudioSource.MIC;//数据源为麦克风
+    public static final int DEFAULT_SAMPLE_RATE = 44100;//采样率
+    public static final int DEFAULT_CHANNEL_CONFIG = AudioFormat.CHANNEL_IN_STEREO;//双通道
+    public static final int DEFAULT_AUDIO_FORMAT = AudioFormat.ENCODING_PCM_16BIT;//16位
 
     private AudioRecord mAudioRecord;
     private int mMinBufferSize = 0;
