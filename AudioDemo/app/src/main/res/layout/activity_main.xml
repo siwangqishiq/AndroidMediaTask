@@ -34,4 +34,23 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="读取文件" />
+
+
+    <Button
+        android:id="@+id/native_start_record"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="native_开始录音" />
+
+    <Button
+        android:id="@+id/native_end_record"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="native_结束录音" />
+
+    <Button
+        android:id="@+id/native_play_audio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="native_播放" />
 </LinearLayout>
