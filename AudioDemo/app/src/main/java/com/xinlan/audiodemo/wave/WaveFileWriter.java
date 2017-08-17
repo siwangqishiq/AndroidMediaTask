@@ -1,5 +1,7 @@
 package com.xinlan.audiodemo.wave;
 
+import android.graphics.ImageFormat;
+
 import java.io.DataOutputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
