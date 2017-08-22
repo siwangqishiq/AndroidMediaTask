@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity implements
 
         try {
             mCamera.setPreviewTexture(surface);
+            mCamera.setDisplayOrientation(90);
             mCamera.startPreview();
 //            mCamera.setPreviewCallback(new Camera.PreviewCallback() {
 //                @Override
