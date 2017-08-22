@@ -67,13 +67,13 @@ public class MainActivity extends AppCompatActivity implements
     public boolean onSurfaceTextureDestroyed(SurfaceTexture surface) {
         mCamera.stopPreview();
         mCamera.release();
-        System.out.println("mCamera release!");
+        //System.out.println("mCamera release!");
         return true;
     }
 
     @Override
     public void onSurfaceTextureUpdated(SurfaceTexture surface) {
-        System.out.println("onSurfaceTextureUpdated!");
+        //System.out.println("onSurfaceTextureUpdated!");
     }
 
     @Override
