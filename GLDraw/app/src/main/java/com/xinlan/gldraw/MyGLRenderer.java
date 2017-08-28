@@ -42,10 +42,10 @@ public class MyGLRenderer implements GLSurfaceView.Renderer  {
         // Draw background color
         GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT | GLES20.GL_DEPTH_BUFFER_BIT);
 
-        // Set the camera position (View matrix)
+        // Set the camera position (View matrix)  创建视图矩阵
         Matrix.setLookAtM(mViewMatrix, 0, 0, 0, -3, 0f, 0f, 0f, 0f, 1.0f, 0.0f);
 
-        // Calculate the projection and view transformation
+        // Calculate the projection and view transformation  投影矩阵
         Matrix.multiplyMM(mMVPMatrix, 0, mProjectionMatrix, 0, mViewMatrix, 0);
 
         // Draw square
