@@ -2,6 +2,7 @@ package com.xinlan.gldraw.nat;
 
 import android.content.Context;
 import android.opengl.GLSurfaceView;
+import android.view.SurfaceHolder;
 
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
@@ -35,5 +36,11 @@ public class RenderSurface extends GLSurfaceView implements GLSurfaceView.Render
     @Override
     public void onDrawFrame(GL10 gl) {
         NativeRenderJNI.update();
+    }
+
+    @Override
+    public void surfaceDestroyed(SurfaceHolder holder) {
+        super.surfaceDestroyed(holder);
+        NativeRenderJNI.destory();
     }
 }//end class
